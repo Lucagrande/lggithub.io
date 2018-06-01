@@ -67,12 +67,40 @@ nav li {
 
 /* classi */
 
+.bottone {
+    border: 1px solid green;
+    background-color: red;
+    color: white;
+    transition: background-color 2s;
+}
+
+.bottone:hover {
+    color: blue;
+    background-color: white;
+}
+
+.bottone_large {
+    width: 300px;
+    font-size: 20px;
+    background-color: red;
+    transition: all 4s ease-in-out;
+}
+
+.bottone_large:hover {
+    color: blue;
+    background-color: white;
+}
+
 .withBorder {
     border: 1px solid gray;
 }
 
 .formItem {
     margin-bottom: 20px;
+}
+
+.formItem:hover {
+    background-color: gray;
 }
 
 .titolo {
