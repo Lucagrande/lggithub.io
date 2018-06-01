@@ -7,7 +7,13 @@
 
 body {
     padding: 20px;
-    background-image: url();
+    /* background-image: url(../lggithub.io/pizza.jpg); */
+}
+
+@media(max-width: 600px) {
+    body {
+        background-color: red;
+    }
 }
 
 img {
