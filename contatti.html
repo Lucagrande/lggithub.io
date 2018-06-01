@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <title>Contatti</title>
+</head>
+
+<body>
+    <a href="index.html">Home</a>
+    <h1>Contatti</h1>
+    <!-- action vuota vuol dire che non invia il form -->
+    <form action="" ,>
+        <div class="formItem">
+            <label for="firstname">Nome</label>
+            <input type="text" , placeholder="inserisci il tuo nome" , name="firstname" required/>
+        </div>
+        <div class="formItem">
+            <label for="age">Età</label>
+            <input type="number" , name="age" , placeholder="inserisci la tua età (min 18 anni)" min="18" , max="40" required/>
+        </div>
+        <div class="formItem">
+            <label for="email">Email</label>
+            <input type="email" , name="email" , placeholder="inserisci la tua email" required/>
+        </div>
+        <div class="formItem">
+            <label for="password">Password</label>
+            <input type="password" , name="password" , placeholder="inserisci la tua password" required/>
+        </div>
+        <div class="formItem">
+            <label for="data">Data</label>
+            <input type="date" , name="data" , placeholder="inserisci la data" />
+        </div>
+        <div class="formItem">
+            <label for="type">Metodo contatto</label>
+            <!-- select per insieme di opzioni -->
+            <select name="type" required>
+                <option value="">Email</option>
+                <option value="">Telefono</option>
+                <option value="">Posta</option>
+            </select>
+        </div>
+        <div class="formItem">
+            <label for="privacy">Accettazione privacy</label>
+            <input type="checkbox" required/>
+        </div>
+        <div class="formItem">
+            <label for="privacy">Sposato</label>
+            <input type="radio" group="radiogroup" name="Sposato" required/>
+        </div>
+        <div class="formItem">
+            <label for="privacy">Celibe</label>
+            <input type="radio" group="radiogroup" name="Celibe" required/>
+        </div>
+        <input type="submit" value="Invia il form!">
+    </form>
+    <!-- radiobutton permette di selezionare solo 1 casella, checkbok tutte -->
+</body>
+
+</html>
