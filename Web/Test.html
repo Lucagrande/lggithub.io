@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+</head>
+
+<body>
+    <style>
+        .yellow {
+            background-color: yellow;
+        }
+        
+        .yellowborder {
+            border-color: blue;
+        }
+        
+        .border {
+            border: dashed;
+        }
+    </style>
+    <div id="yellowDiv" class="yellow"> My yellow content</div>
+    <div id="footer">a</div>
+    <script>
+        document.getElementById('yellowDiv').className += " border";
+        $("#footer").html("All rights reserved");
+    </script>
+
+</body>
+
+</html>

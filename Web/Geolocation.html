@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function Geo() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                alert("Il tuo browser non supporta Geolocation");
+            }
+        }
+
+        function showPosition(position) {
+            var t = document.getElementById("target");
+            t.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Esempio Geolocation</h2>
+    <input type="button" onclick="Geo()" value="Geolocation">
+    <div id="target"></div>
+</body>
+
+</html>

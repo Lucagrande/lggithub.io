@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            animation: mymove 5s infinite;
+        }
+        /* Standard syntax */
+        
+        @keyframes mymove {
+            0% {
+                background-color: red;
+                transform: rotate(0deg);
+                left: 0px;
+                top: 0px;
+            }
+            25% {
+                background-color: blue;
+                transform: rotate(90deg);
+                left: 88%;
+                top: 0px;
+            }
+            50% {
+                background-color: yellow;
+                transform: rotate(180deg);
+                left: 88%;
+                top: 300px;
+            }
+            75% {
+                background-color: purple;
+                transform: rotate(270deg);
+                left: 0px;
+                top: 300px;
+            }
+            100% {
+                background-color: black;
+                transform: rotate(360deg);
+                left: 0px;
+                top: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>The @keyframes Rule</h1>
+
+    <p><strong>Note:</strong> The @keyframes rule is not supported in Internet Explorer 9 and earlier versions.</p>
+
+    <div></div>
+
+</body>
+
+</html>

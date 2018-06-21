@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script>
+        function LeggiSession() {
+            document.getElementById("Text1").value =
+                sessionStorage.getItem("varSession");
+        }
+
+        function LeggiLocal() {
+            document.getElementById("Text2").value =
+                localStorage.getItem("varLocal");
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Pagina di arrivo</h2>
+        <div class="row">
+            <div class="col-sm">
+                <input id="Text1" type="text" /> <br>
+                <input id="Button1" type="button" value="Session" onclick="LeggiSession()" />
+            </div>
+            <div class="col-sm">
+                <input id="Text2" type="text" /> <br>
+                <input id="Button2" type="button" value="Local" onclick="LeggiLocal()" />
+            </div>
+        </div>
+        <a href="HtmlPartenza.html">Vai a partenza
+    </div>
+
+</body>
+
+</html>

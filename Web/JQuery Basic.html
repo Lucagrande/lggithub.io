@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <script src="./jquery-3.3.1.js"></script>
+    <script src="./jquery-ui.min.js"></script>
+    <link src="./jquery-ui.min.css" rel="stylesheet"></link>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <script>
+        $(document).ready(function() {
+            $("#t1").datepicker();
+            $("#b1").click(function() {
+                //$("#p1").toggle();
+                // $("#p3").toggle("slow");
+                // $("#p4").fadeToggle();
+                $("#p5").fadeToggle("slow");
+            });
+        });
+    </script>
+    <script>
+        $(function() {
+            $("#accordion").accordion();
+        });
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <p id="p1">Paragrafo 1</p>
+                <p id="p2">Paragrafo 2</p>
+                <p id="p3">Paragrafo 3</p>
+                <p id="p4">Paragrafo 4</p>
+                <p id="p5">Paragrafo 5</p>
+                <input type="button" id="b1" value="Premi"> <br> <br>
+                <input type="text" id="t1" placeholder="Inserisci data">
+            </td>
+            <td>
+                <h1>Accordion</h1>
+                <div id="accordion">
+
+                    <h3>Section 1</h3>
+                    <div>
+                        <p>
+                            Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam.
+                        </p>
+                    </div>
+                    <h3>Section 2</h3>
+                    <div>
+                        <p>
+                            Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus.
+                        </p>
+                    </div>
+                    <h3>Section 3</h3>
+                    <div>
+                        <p>
+                            Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+                        </p>
+                        <ul>
+                            <li>List item one</li>
+                            <li>List item two</li>
+                            <li>List item three</li>
+                        </ul>
+                    </div>
+                    <h3>Section 4</h3>
+                    <div>
+                        <p>
+                            Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        </p>
+                        <p>
+                            Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+                        </p>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

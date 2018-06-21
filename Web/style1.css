@@ -1,0 +1,29 @@
+div {
+    margin: 15px;
+    transition: 2s;
+}
+
+div:hover {
+    transform: rotate(180deg)
+}
+
+body {
+    background-color: brown;
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        background-color: aqua
+    }
+}
+
+@media screen and (max-width: 300px) {
+    body {
+        background-color: yellow
+    }
+}
+
+img {
+    width: 100%;
+    height: auto
+}

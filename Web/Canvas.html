@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <canvas id="CanvasCerchio" width=200px; height=100px; style="border:1px solid #000000;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+    <script>
+        var c = document.getElementById("CanvasCerchio");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+        ctx.stroke();
+    </script>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.font = "30px Arial";
+        ctx.strokeText("Hello World", 10, 50);
+    </script>
+    <div id="orologio"></div>
+    <script type="text/javascript">
+        function aggiornaOrologio() {
+            var ora = new Date();
+            var hh = ora.getHours();
+            var mm = ora.getMinutes();
+            var ss = ora.getSeconds();
+            str = ((hh < 10) ? "0" : "") + hh + ":" + ((mm < 10) ? "0" : "") + mm + ":" + ((ss < 10) ? "0" : "") + ss;
+            document.getElementById('orologio').innerHTML = str;
+        }
+        setInterval("aggiornaOrologio()", 1000);
+    </script>
+</body>
+
+</html>

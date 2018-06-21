@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Home</title>
+</head>
+
+<body>
+    <h2>Elementi Forms</h2>
+    <hr> <br>
+    <form action="WebForm.asp">
+        <table>
+            <!-- tr=table row -->
+            <tr>
+                <!-- td=table data -->
+                <td>First Name</td>
+                <td><input type="text" name="Nome" required></td>
+
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td> <input type="text" name="Cognome" required></td>
+            </tr>
+
+            <tr>
+                <td>City</td>
+                <td><input type="text" name="Città" required></td>
+            </tr>
+            <tr>
+                <td>eMail</td>
+                <td><input type="email" required></td>
+            </tr>
+
+            <tr>
+                <td>Qualifica</td>
+                <td>
+                    <select name="Qualifica">
+                <option selected></option>
+                <option>Dirigente</option>
+                <option>Impiegato</option>
+                <option>Other</option> 
+            </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Iscrizione al Forum</td>
+                <td><input type="checkbox"></td>
+            </tr>
+
+            <tr>
+                <td>Giudizio</td>
+                <td>
+                    <input type="radio" name="Giudizio">Scarso <br>
+                    <input type="radio" name="Giudizio">Buono <br>
+                    <input type="radio" name="Giudizio">Ottimo
+                </td>
+            </tr>
+            <tr>
+                <td> <button type="submit">Invia</button></td>
+                <td> <button type="reset" class="btn btn-primary col">Reset</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

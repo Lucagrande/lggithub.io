@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Sintassi JS</title>
+    <!-- Javascript rende dinamico HTML -->
+    <script>
+        function Saluta() {
+            //non esistono tipi in javascript ma solo var, che rende visibile la variabile solo nella porzione di codice fra parentesi (senza var la variabile è visibile in tutto il codice)
+            var nome = document.getElementById("t1").value;
+            //quando il target è dentro il div/lo span: innerHTML
+            document.getElementById("target").innerHTML = "Ciao " + nome;
+        }
+
+        function Moltiplica() {
+            var risultato = document.getElementById("target1");
+            risultato.innerHTML = document.getElementById("n1").value * document.getElementById("n2").value;
+        }
+
+        function Dividi() {
+            var risultato = document.getElementById("target2");
+            risultato.innerHTML = document.getElementById("n1").value / document.getElementById("n2").value;
+        }
+
+        function Somma() {
+            var risultato = document.getElementById("target3");
+            var num1 = document.getElementById("n1").value;
+            var num2 = document.getElementById("n2").value;
+            risultato.innerHTML = parseInt(num1) + parseInt(num2);
+        }
+
+        function Sottrai() {
+            var risultato = document.getElementById("target4");
+            var num1 = document.getElementById("n1").value;
+            var num2 = document.getElementById("n2").value;
+            risultato.innerHTML = parseInt(num1) - parseInt(num2);
+        }
+
+        function Calcola() {
+            var operatori = document.getElementByName("r1");
+            var num1 = document.getElementById("n1").value;
+            var num2 = document.getElementById("n2").value;
+            var risultato = document.getElementById("target5");
+            var elementi = operatori.length;
+            for (var i = 0; i < elementi; i++) {
+                if (operatori[i].checked) {
+                    risultato.innerHTML = eval(num1 + operatori[i].value + num2);
+                    break;
+                }
+            }
+        }
+
+        function Pitagora() {
+            var righe = document.getElementById("r").value;
+            var colonne = document.getElementById("c").value;
+            var risultato = document.getElementById("target6");
+            if (righe <= 25 && colonne <= 25) {
+                var tabella = "";
+                tabella = "<table border='1'>";
+                for (i = 1; i <= righe; i++) {
+                    tabella += "<tr>";
+                    for (j = 1; j <= colonne; j++) {
+                        tabella += "<td>" + (i * j) + "</td>";
+                    }
+                    tabella += "</tr>";
+                }
+                tabella += "</table>";
+                risultato.innerHTML = tabella;
+            } else {
+                alert("Valore massimo per righe e colonne: 25")
+            };
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Esempi Javascript</h1>
+    <hr/>
+    <input type="text" id="t1" placeholder="Scrivi il tuo nome">
+    <br>
+    <input type="button" value="Saluta" onclick="Saluta()">
+    <div id="target"></div>
+    <input type="text" id="n1" placeholder="Scrivi un numero">
+    <input type="text" id="n2" placeholder="Scrivi un numero"> <br>
+    <input type="button" value="Moltiplica" onclick="Moltiplica()">
+    <span id="target1"></span>
+    <input type="button" value="Dividi" onclick="Dividi()">
+    <span id="target2"></span>
+    <input type="button" value="Somma" onclick="Somma()">
+    <span id="target3"></span>
+    <input type="button" value="Sottrai" onclick="Sottrai()">
+    <span id="target4"></span> <br>
+    <input type="radio" name="r1" value="+">+ <br>
+    <input type="radio" name="r1" value="-">- <br>
+    <input type="radio" name="r1" value="*">* <br>
+    <input type="radio" name="r1" value="/">/ <br>
+    <input type="button" value="Calcola" onclick="Calcola()">
+    <span id="target5"></span>
+    <hr> Righe: <input type="text" id="r"><br> Colonne: <input type="text" id="c"><br>
+    <input type="button" value="Pitagora" onclick="Pitagora()">
+    <div id="target6"></div>
+
+</body>
+
+</html>

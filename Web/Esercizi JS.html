@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Esercizi Javascript</title>
+    <script>
+        function CaricaImg(arg) {
+            var img = document.getElementById("myImg");
+            switch (arg) {
+                case 1:
+                    img.src = "./Jpg/limoni.gif";
+                    break;
+                case 2:
+                    img.src = "./Jpg/uva.gif";
+                    break;
+                case 3:
+                    img.src = "./Jpg/mandarino.gif";
+                    break;
+            }
+        }
+
+        function AccendiSpegni() {
+            var img = document.getElementById("lamp");
+            if (img.src.match("bulbon")) {
+                img.src = "./Jpg/pic_bulboff.gif";
+            } else {
+                img.src = "./Jpg/pic_bulbon.gif"
+            }
+        }
+    </script>
+</head>
+
+
+
+<body>
+    <div id="menu"></div>
+    <table border="1">
+        <!-- tr=table row -->
+        <tr>
+            <!-- td=table data -->
+            <td style="text-align: center" colspan="2">Frutta</td>
+        </tr>
+
+        <tr>
+            <td onmouseover="CaricaImg(1)">Limoni</td>
+            <td> <img id="myImg" src="./Jpg/limoni.gif" alt=""></td>
+        </tr>
+        <tr>
+            <td onmouseover="CaricaImg(2)">Uva</td>
+        </tr>
+        <tr>
+            <td onmouseover="CaricaImg(3)">Mandarino</td>
+        </tr>
+
+</body>
+
+<img id="lamp" onclick="AccendiSpegni()" src="./Jpg/pic_bulboff.gif">
+
+</html>

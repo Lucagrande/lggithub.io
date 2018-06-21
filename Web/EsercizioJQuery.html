@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="./jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#button1").click(function() {
+                $("#1").toggle();
+                $("#2").toggle();
+                $("#3").toggle();
+            });
+            $("#button2").click(function() {
+                $("#2").css('color', 'red');
+            });
+            $("#button3").hover(function() {
+                $("#2").text("abc");
+            });
+            $("#button3").mouseleave(function() {
+                $("#2").text("Secondo titolo");
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <h2 id="1">Primo titolo</p>
+        <h2 id="2">Secondo titolo</h2>
+        <h2 id="3">Terzo titolo</h2>
+        <input type="button" id="button1" value="Cancella tutto">
+        <input type="button" id="button2" value="Colora bottone 2">
+        <input type="button" id="button3" value="abc">
+</body>
+
+</html>
